@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@/components/icon";
 
 export const CreateAccountPage = () => {
+  const [name, setName] = useState("");
+  const creatingUser = async () => {
+    const user = {
+      name: name,
+    };
+    const res = await fetch("http://localhost:8000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    });
+  };
   return (
     <section className="flex">
       <div className="flex w-3/6 justify-center items-center">
@@ -21,6 +32,7 @@ export const CreateAccountPage = () => {
           </div>
           <div className="flex flex-col gap-4">
             <input
+              onChange={(e) => setName(e.target.value)}
               className="bg-gray-100 border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4"
               placeholder="Name"
               type="text"
@@ -46,7 +58,12 @@ export const CreateAccountPage = () => {
           </div>
           <div className="flex">
             <h3 className="text-base text-[#334155]">Don’t have account?</h3>
-            <button className="flex text-[#0166FF] px-3 gap-1">Sign Up</button>
+            <button
+              onClick={() => creatingUser()}
+              className="flex text-[#0166FF] px-3 gap-1"
+            >
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
