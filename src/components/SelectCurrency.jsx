@@ -37,7 +37,7 @@ export const SelectCurrency = () => {
               <p>
                 Your base currency should be the one you use most often. All
                 transaction in other currencies will be calculated based on this
-                one{" "}
+                one
               </p>
             </div>
             <div>

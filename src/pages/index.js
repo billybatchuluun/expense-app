@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <section>
       <SignInPage />
-      <CreateAccountPage />
-      <LoadingPage />
-      <SelectCurrency />
+      {/* <CreateAccountPage /> */}
+      {/* <LoadingPage /> */}
+      {/* <SelectCurrency /> */}
     </section>
   );
 }

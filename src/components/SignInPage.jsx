@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "@/components/icon";
+import { CreateAccountPage } from "./CreateAccountPage";
 
 export const SignInPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const signInUser = async () => {
+    const user = {
+      email: email,
+      password: password,
+    };
+    const res = await fetch("http://localhost:8000/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    });
+    alert("Success");
+  };
   return (
     <section className="flex">
       <div className="flex w-3/6 justify-center items-center">
@@ -21,22 +36,29 @@ export const SignInPage = () => {
           </div>
           <div className="flex flex-col gap-4">
             <input
+              onChange={(e) => setEmail(e.target.value)}
               className="bg-gray-100 border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4"
               placeholder="Email"
               type="text"
             ></input>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               className="bg-gray-100 border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4"
               placeholder="Password"
               type="text"
             ></input>
-            <button className="bg-[#0166FF] border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4 text-white">
+            <button
+              onClick={() => signInUser()}
+              className="bg-[#0166FF] border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4 text-white"
+            >
               Log in
             </button>
           </div>
           <div className="flex">
             <h3 className="text-base text-[#334155]">Don’t have account?</h3>
-            <button className="flex text-[#0166FF] px-3 gap-1">Sign Up</button>
+            <a className="flex text-[#0166FF] px-3 gap-1" href="/signup">
+              Sign Up
+            </a>
           </div>
         </div>
       </div>
