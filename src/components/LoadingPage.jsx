@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "./icon";
+import { LoadingIcon } from "./LoadingIcon";
 
 export const LoadingPage = () => {
   return (
@@ -16,7 +16,7 @@ export const LoadingPage = () => {
           </div>
           <div className="flex flex-col gap-4 justify-center items-center">
             <div>
-              <img src="./Loading.png"></img>
+              <LoadingIcon />
             </div>
             <div>
               <p className="text-base">Түр хүлээнэ үү...</p>
