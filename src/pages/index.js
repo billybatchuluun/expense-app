@@ -5,17 +5,28 @@ import { SelectCurrency } from "@/components/SelectCurrency";
 import { MainPage } from "@/components/MainPage";
 import { CashBalance } from "@/components/CashBalance";
 import { GoodJob } from "@/components/GoodJob";
+import { NaviBar } from "@/components/NaviBar";
+import { Card } from "@/components/Card";
+import { CardIncome } from "@/components/CardIncome";
+import { CardExpense } from "@/components/CardExpense";
+import { Chart } from "@/components/Chart";
 
 export default function Home() {
   return (
-    <section>
-      {/* <SignInPage /> */}
-      {/* <CreateAccountPage /> */}
-      {/* <LoadingPage /> */}
-      <SelectCurrency />
-      {/* <MainPage /> */}
-      <CashBalance />
-      <GoodJob />
+    <section className="bg-[#F3F4F6]">
+      <nav>
+        <NaviBar />
+      </nav>
+      <div>
+        <div className="flex place-content-around mt-4">
+          <Card />
+          <CardIncome />
+          <CardExpense />
+          <Chart />
+        </div>
+      </div>
+
+      <div></div>
     </section>
   );
 }

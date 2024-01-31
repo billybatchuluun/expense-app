@@ -6,6 +6,7 @@ import { Ellipse1 } from "./Ellipse1";
 import { Ellipse2 } from "./Ellipse2";
 import { Ellipse3 } from "./Ellipse3";
 import { Line } from "./Line";
+import { CashBalance } from "./CashBalance";
 
 export const SelectCurrency = () => {
   return (
@@ -58,9 +59,11 @@ export const SelectCurrency = () => {
               </p>
             </div>
             <div>
-              <button className="bg-[#0166FF] border-solid border-2 border-gray-300 w-[390px] h-12 rounded-xl pl-4 text-white">
-                Confirm
-              </button>
+              <a href="/cashbalance">
+                <button className="bg-[#0166FF] border-solid border-2 border-gray-300 w-[390px] h-12 rounded-xl pl-4 text-white">
+                  Confirm
+                </button>
+              </a>
             </div>
           </div>
         </div>

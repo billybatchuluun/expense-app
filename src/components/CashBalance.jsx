@@ -61,9 +61,11 @@ export const CashBalance = () => {
               </p>
             </div>
             <div>
-              <button className="bg-[#0166FF] border-solid border-2 border-gray-300 w-[390px] h-12 rounded-xl pl-4 text-white">
-                Confirm
-              </button>
+              <a href="/goodjob">
+                <button className="bg-[#0166FF] border-solid border-2 border-gray-300 w-[390px] h-12 rounded-xl pl-4 text-white">
+                  Confirm
+                </button>
+              </a>
             </div>
           </div>
         </div>
