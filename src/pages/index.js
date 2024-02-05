@@ -10,6 +10,8 @@ import { Card } from "@/components/Card";
 import { CardIncome } from "@/components/CardIncome";
 import { CardExpense } from "@/components/CardExpense";
 import { Chart } from "@/components/Chart";
+import { Chart1 } from "@/components/Chart1";
+import { LastRecord } from "@/components/LastRecord";
 
 export default function Home() {
   return (
@@ -17,12 +19,18 @@ export default function Home() {
       <nav>
         <NaviBar />
       </nav>
-      <div>
-        <div className="flex place-content-around mt-4">
+      <div className="flex flex-col items-center gap-10">
+        <div className="flex justiy-center mt-4 gap-10">
           <Card />
           <CardIncome />
           <CardExpense />
+        </div>
+        <div className="flex justify-center gap-10">
           <Chart />
+          <Chart1 />
+        </div>
+        <div>
+          <LastRecord />
         </div>
       </div>
 

@@ -2,12 +2,12 @@ import React from "react";
 
 export const NaviBar = () => {
   return (
-    <section>
-      <div className="flex justify-between items-center px-[120px] py-4 bg-white">
+    <section className="flex  justify-center bg-white">
+      <div className="w-3/4 flex justify-between items-center px-[120px] py-4">
         <div className="flex gap-6">
           <img src="./Vector.png"></img>
           <p className="heading-4">Dashboard</p>
-          <p>Records</p>
+          <p className="font-bold">Records</p>
         </div>
         <div className="flex items-center gap-6">
           <button className="flex bg-[#0166FF] text-white rounded-[20px] w-[100px] h-9 justify-center items-center">
