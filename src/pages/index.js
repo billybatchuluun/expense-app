@@ -15,7 +15,7 @@ import { LastRecord } from "@/components/LastRecord";
 
 export default function Home() {
   return (
-    <section className="bg-[#F3F4F6]">
+    <section className="bg-[#F3F4F6] w-screen ">
       <nav>
         <NaviBar />
       </nav>

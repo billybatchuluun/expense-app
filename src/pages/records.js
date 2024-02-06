@@ -5,20 +5,31 @@ import { HaaltLeft } from "@/components/HaaltLeft";
 import { HaaltRight } from "@/components/HaaltRight";
 import { Yesterday } from "@/components/Yesterday";
 import { Today } from "@/components/Today";
+import { AddRecordWindow } from "@/components/AddRecordWindow";
+import { useState } from "react";
 
-export default function Home() {
+export default function Records() {
+  const [isAddRecordVisible, setIsAddRecordVisible] = useState(false);
   return (
-    <section className="bg-[#F3F4F6]">
+    <section className="bg-[#F3F4F6] w-screen ">
       <nav>
         <NaviBar />
       </nav>
       <div className="flex mt-10 px-[120px] justify-center gap-8">
         <div className="flex bg-white w-[282px] rounded-2xl ">
+          {isAddRecordVisible === true && (
+            <div className="absolute mt-64, ml-64">
+              <AddRecordWindow setIsAddRecordVisible={setIsAddRecordVisible} />
+            </div>
+          )}
           <div className="flex flex-col  gap-8 pl-6">
             <div className="mt-8">
               <p className="text-2xl font-bold">Records</p>
             </div>
-            <button className="flex bg-[#0166FF] text-white rounded-[20px] w-[250px] h-9 justify-center items-center">
+            <button
+              onClick={() => setIsAddRecordVisible(!isAddRecordVisible)}
+              className="flex bg-[#0166FF] text-white rounded-[20px] w-[250px] h-9 justify-center items-center"
+            >
               + Add
             </button>
             <input
