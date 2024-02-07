@@ -1,6 +1,6 @@
 import CreateAccountPage from "@/components/CreateAccountPage";
 
-export default function CreateAccountPage() {
+export default function SignUp() {
   return (
     <>
       <CreateAccountPage />

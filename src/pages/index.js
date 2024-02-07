@@ -20,16 +20,16 @@ export default function Home() {
         <NaviBar />
       </nav>
       <div className="flex flex-col items-center gap-10">
-        <div className="flex justiy-center mt-4 gap-10">
+        <div className="flex justiy-around mt-4 gap-10">
           <Card />
           <CardIncome />
           <CardExpense />
         </div>
-        <div className="flex justify-center gap-10">
+        <div className="flex justify-around gap-10">
           <Chart />
           <Chart1 />
         </div>
-        <div>
+        <div className="flex">
           <LastRecord />
         </div>
       </div>

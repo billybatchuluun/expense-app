@@ -7,7 +7,7 @@ export const CardIncome = () => {
         <div className="flex gap-2 px-4 py-6 items-center border-b-2">
           <div className="w-2 h-2 bg-[#84CC16] rounded-full"></div>
           <div className="flex ">
-            <p>Your Income</p>
+            <p className="font-bold">Your Income</p>
           </div>
         </div>
 

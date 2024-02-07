@@ -5,7 +5,7 @@ import { CardCash } from "./CardCash";
 export const Card = () => {
   return (
     <section>
-      <div className="flex flex-col w-[385px] h-[220px] bg-blue-700 rounded-2xl place-content-between p-9">
+      <div className="flex flex-col w-[385px] h-[220px] bg-[url('/nature.jpeg')] rounded-2xl place-content-between p-9 ">
         <div>
           <CardIcon />
         </div>

@@ -5,9 +5,9 @@ export const CardExpense = () => {
     <section>
       <div className="flex flex-col w-[385px] h-[220px] bg-white rounded-2xl ">
         <div className="flex gap-2 px-4 py-6 items-center border-b-2">
-          <div className="w-2 h-2 bg-[#84CC16] rounded-full"></div>
+          <div className="w-2 h-2 bg-[#0166FF] rounded-full"></div>
           <div className="flex ">
-            <p>Total Expense</p>
+            <p className="font-bold">Total Expense</p>
           </div>
         </div>
 

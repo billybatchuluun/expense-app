@@ -7,16 +7,17 @@ import { Yesterday } from "@/components/Yesterday";
 import { Today } from "@/components/Today";
 import { AddRecordWindow } from "@/components/AddRecordWindow";
 import { useState } from "react";
+import { Category } from "@/components/Category";
 
 export default function Records() {
   const [isAddRecordVisible, setIsAddRecordVisible] = useState(false);
   return (
-    <section className="bg-[#F3F4F6] w-screen ">
+    <section className="bg-[#edeff2] w-screen ">
       <nav>
         <NaviBar />
       </nav>
       <div className="flex mt-10 px-[120px] justify-center gap-8">
-        <div className="flex bg-white w-[282px] rounded-2xl ">
+        <div className="flex bg-slate-100 w-[282px] rounded-2xl ">
           {isAddRecordVisible === true && (
             <div className="absolute mt-64, ml-64">
               <AddRecordWindow setIsAddRecordVisible={setIsAddRecordVisible} />
@@ -33,7 +34,7 @@ export default function Records() {
               + Add
             </button>
             <input
-              className="bg-gray-100 border-solid border-2 border-gray-300 w-[250px] h-9 rounded-xl pl-4"
+              className="bg-white border-solid border-2 border-gray-300 w-[250px] h-9 rounded-xl pl-4"
               placeholder="Search"
               type="text"
             ></input>
@@ -52,107 +53,8 @@ export default function Records() {
                 Expense
               </label>
             </div>
-            <div className="flex flex-col gap-6">
-              <div>
-                <p className="font-bold">Category</p>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Food & Drinks</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Shopping</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Housing</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Transportation</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Vehicle</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Life & Entertaintment</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Comunication, PC</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Financial expenses</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Investments</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Income</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <Eyes />
-                </div>
-                <div>
-                  <p>Others</p>
-                </div>
-              </div>
-              <div className="flex gap-5 items-center">
-                <div className="w-4 h-4">
-                  <PlusIcon />
-                </div>
-                <div>
-                  <p>Add Category</p>
-                </div>
-              </div>
-            </div>
+            <Category />
+
             <div className="flex flex-col gap-6">
               <div>
                 <p className="font-bold">Amount Range</p>
@@ -170,12 +72,12 @@ export default function Records() {
             </div>
           </div>
         </div>
-        <div className="w-[900px] mt-5">
+        <div className="w-[900px]  p-10 bg-slate-100 rounded-2xl">
           <div>
             <div className="flex place-content-between items-center">
               <div className="flex items-center gap-4">
-                <div className="flex  bg-slate-300 w-10 h-10 justify-center items-center  rounded-md">
-                  <div className="w-4 h-4 ">
+                <div className="flex  bg-slate-300 w-10 h-10  justify-center items-center  rounded-md">
+                  <div className="flex w-4 h-4 ">
                     <HaaltLeft />
                   </div>
                 </div>
@@ -183,13 +85,13 @@ export default function Records() {
                   <p>Last 30 days</p>
                 </div>
                 <div className="flex  bg-slate-300 w-10 h-10 justify-center items-center  rounded-md">
-                  <div className="w-4 h-4 ">
+                  <div className="flex w-4 h-4 ">
                     <HaaltRight />
                   </div>
                 </div>
               </div>
               <div>
-                <div className="flex bg-white rounded-md w-[200px] h-10 items-center justify-center">
+                <div className="flex bg-white rounded-md w-[200px] h-10 items-center border-gray-300 justify-center">
                   <p className="font-bold "> Newest first</p>
                 </div>
               </div>
