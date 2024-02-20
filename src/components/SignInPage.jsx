@@ -6,16 +6,16 @@ export const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const signInUser = async () => {
-    const user = {
-      email: email,
-      password: password,
-    };
-    const res = await fetch("http://localhost:8000/signin", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
-    alert("Success");
+    try {
+      const res = await fetch("http://localhost:8000/signin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      alert("Success");
+    } catch (error) {
+      alert(error.message);
+    }
   };
   return (
     <section className="flex">
@@ -36,19 +36,23 @@ export const SignInPage = () => {
           </div>
           <div className="flex flex-col gap-4">
             <input
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
               className="bg-gray-100 border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4"
               placeholder="Email"
               type="text"
             ></input>
             <input
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               className="bg-gray-100 border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4"
               placeholder="Password"
               type="text"
             ></input>
             <button
-              onClick={() => signInUser()}
+              onClick={signInUser}
               className="bg-[#0166FF] border-solid border-2 border-gray-300 w-72 h-12 rounded-xl pl-4 text-white"
             >
               Log in
