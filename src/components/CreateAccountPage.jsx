@@ -6,17 +6,27 @@ export default function CreateAccountPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const creatingUser = async () => {
-    const user = {
-      name: name,
-      email: email,
-      password: password,
-    };
-    const res = await fetch("http://localhost:8000/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(user),
-    });
-    alert("Success");
+    try {
+      const user = {
+        name: name,
+        email: email,
+        password: password,
+      };
+      const res = await fetch("http://localhost:8000/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
+      });
+      console.log(res);
+      // const res = await fetch("http://localhost:8000/signup", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(user),
+      // });
+      alert("Success");
+    } catch (error) {
+      console.error("error in signup", error);
+    }
   };
 
   return (
