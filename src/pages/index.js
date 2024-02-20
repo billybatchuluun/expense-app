@@ -14,7 +14,7 @@ import { Chart1 } from "@/components/Chart1";
 import { LastRecord } from "@/components/LastRecord";
 
 export default function Home() {
-  console.log("hha");
+  console.log("main");
   return (
     <section className="bg-[#F3F4F6] w-screen ">
       <nav>
